@@ -1,0 +1,24 @@
+.btn {
+    color: #fff;
+    border: none;
+    height: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &_lg {
+        width: 150px;
+    }
+
+    &_sm {
+        width: 100px;
+    }
+
+    &_black {
+        background-color: #171921;
+    }
+
+    &_red {
+        background-color: #F94F4F;
+    }
+}
