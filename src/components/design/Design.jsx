@@ -1,13 +1,21 @@
 import React from 'react';
 import './Design.scss';
 import design from '../assets/design/design.jpeg';
+import designMb from '../assets/design/design-mobile.jpg';
 import { Link } from 'react-router-dom';
 
 const Design = () => {
     return (
         <section className='design'>
             <div className='design_img'>
-                <img src={design} alt='Creative Design' />
+                <picture>
+                    <source srcSet={`${designMb} 1x`} media="(max-width: 500px)" />
+                    <img
+                        className="logo__apple"
+                        srcSet={`${design} 2x`}
+                        alt="Full Logo" 
+                    />
+                </picture>
             </div>
 
             <div className='design_info'>
