@@ -43,3 +43,54 @@
         }
     }
 }
+
+// ------------Media Query
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .landing {
+        &_info {
+            & h1,p { max-width: 55%; }
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .landing {
+        &_info {
+            & h1,p { max-width: 75%; }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .landing {
+        &_info {
+            & h1,p { max-width: 100%; }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .landing {
+        height: 1000px;
+        &_img {
+            height: 400px;
+            background: none;
+            & img { height: 400px;}
+        }
+        &_info {
+            position: static;
+            top: 0;
+            transform: translate(0);
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 20px;
+            overflow: hidden;
+
+            & h1,p { max-width: 95%; }
+            & h1 { font-size: 50px; }
+            & p { font-size: 20px; }
+        }
+    }
+}

@@ -6,7 +6,7 @@ import './Landing.scss';
 const Landing = () => {
     return (
         <section className='landing'>
-            <div className='img_container landing_img'>
+            <div className='landing_img'>
                 <img src={creativeHero} alt='creative landing' />
             </div>
             <div className='landing_info'>

@@ -1,0 +1,112 @@
+// Colors: #F94F4F #171921 #E55857 #191921
+
+.slide {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 400px;
+        width: 50%;
+        background-color: #171921;
+        color: #fff;
+        z-index: 1;
+    }
+
+    &_contain {
+        margin: 0 40px;
+
+        & h3 {
+            font-size: 40px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &_arrows {
+        svg {
+            width: 40px;
+            height: 40px;
+            fill: #F94F4F;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+
+    &_right {
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+    }
+
+    &_img {
+        height: 100%;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,0) 80%, rgba(0,0,0,.5) 100%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            background: no-repeat scroll center;
+            background-position: center;
+        }
+    }
+
+    &_content {
+        position: absolute;
+        top: 85%;
+        left: 70%;
+        color: #fff;
+
+        & p {
+            font-size: 12px;
+            font-weight: 300;
+            text-align: right;
+        }
+    }
+}
+
+// --------Media Query
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .slide {
+        &_contain { margin: 0 40px; }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .slide {
+        &_content {
+            left: 20%;
+            & p { text-align: left; }
+        }
+        &_info { width: 60%; }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slide {
+        flex-direction: column-reverse;
+        height: 800px;
+        &_info, &_right { width: 100%; height: 400px; } 
+        &_right { top: 0; }
+        &_content {
+            left: 10%; 
+            & p { text-align: left; }
+        }
+    }
+}

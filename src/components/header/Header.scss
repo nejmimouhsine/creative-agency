@@ -30,7 +30,36 @@
                 }
             }
         }
+    }
+}
 
-        // button {}
+.toogle { display: none; }
+
+// -------Media Query
+@media only screen and (max-width: 1000px) {
+    .header {
+        background: #fff;
+
+        &_nav {
+            display: none;
+            &.active {
+                display: flex;
+                flex-direction: column;
+                height: 300px;
+                width: 100%;
+                background: #fff;
+                position: absolute;
+                top: 110px;
+                left: 0;
+                z-index: 999;
+                & ul { width: 100%; height: 100%; flex-direction: column; justify-content: space-evenly; }
+                & a {color: #000;}
+                & button { margin: auto; }
+            }
+        }
+    }
+    .toogle {
+        display: flex;
+        & svg { width: 25px; height: 25px; }
     }
 }

@@ -1,0 +1,114 @@
+.features {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    &_title {
+        padding-top: 100px;
+        padding-left: 180px;
+        height: 650px;
+        width: 50%;
+        overflow: visible;
+        z-index: 1;
+
+        & h4 {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1;
+        }
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0;
+        justify-content: space-evenly;
+        height: 800px;
+        width: 60%;
+        background-color: #fc4949;
+        color: #fff;
+        position: absolute;
+        top: -150px;
+        right: 0;
+    }
+
+    &_text {
+        display: none;
+    }
+
+    &_feat {
+        position: relative;
+
+        & span {
+            position: absolute;
+            top: -35px;
+            left: -30px;
+            font-size: 50px;
+            font-weight: 900;
+            opacity: 0.3;
+        }
+
+        & h5, p { max-width: 280px; margin-bottom: 15px; }
+
+        & p {
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+}
+
+// ---------Media Query
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .features {
+        &_title {
+            padding-left: 50px;
+            width: 40%;
+
+            & h4 { font-size: 40px; }
+        }
+
+        &_info { padding: 0; }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .features {
+        &_title {
+            & h4 { font-size: 30px; }
+        }
+        &_info { padding: 0; }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .features {
+        &_title { height: 520px; }
+        &_info { height: 600px; top: -80px }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .features {
+        flex-direction: column;
+        position: relative;
+
+        &_title { display: none; }
+        &_info {
+            width: 100%;
+            position: static;
+            z-index: 1;
+            padding: 0;
+        }
+        &_text {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            & h5 { font-size: 30px; max-width: 80%; }
+        }
+        &_feat {
+            & h5 { font-size: 20px; }
+            & p { font-size: 16px; line-height: 2; }
+        }
+    }
+}

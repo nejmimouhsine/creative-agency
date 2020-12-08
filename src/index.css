@@ -22,3 +22,45 @@ a {
         margin: auto;
     }
 }
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    .container {
+        width: 900px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .container {
+        width: 700px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .container {
+        width: 550px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+}

@@ -5,6 +5,8 @@ import Header from './components/header/Header';
 import Landing from './components/landing/Landing';
 import Design from './components/design/Design';
 import Features from './components/features/Features';
+import Slide from './components/slide/Slide';
+import Footer from './components/footer/Footer';
 
 function App() {
     return (
@@ -14,6 +16,8 @@ function App() {
                 <Landing />
                 <Design />
                 <Features />
+                <Slide />
+                <Footer /> 
             </div>
         </Router>
   );
